@@ -4,6 +4,7 @@ void ShowFibNth(long int a, long int b){
 
      printf("%d",a);
      if(b-a>0)
+          printf("\n");
      return ShowFibNth(b-a,a);
 }
 
