@@ -1,18 +1,19 @@
 #include<stdio.h>
 
-void ShowFibNth(long int a, long int b){
+int mem[2000];
 
-     printf("%d",a);
-     if(b-a>0)
-          printf("\n");
-     return ShowFibNth(b-a,a);
-}
+int fibo(int n){
+     if(n==1 || n==2)
+          return 1;
+     if(mem[n]>0)
+          return mem[n];
+     mem[n]=fibo(n-1)+fibo(n-2);
+     return mem[n];
 
 
 int main(){
-    long int a,b;
-    scanf("%d",&a);
-    scanf("%d",&b);
-    ShowFibNth(a,b);
+   int n;
+     scanf("%d",&n);
+     fibo(n);
 return 0;
 }
