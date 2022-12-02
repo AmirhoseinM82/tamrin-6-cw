@@ -14,6 +14,7 @@ int fibo(int n){
 int main(){
    int n;
      scanf("%d",&n);
-     fibo(n);
+    int x=fibo(n);
+      printf("%d",x);
 return 0;
 }
